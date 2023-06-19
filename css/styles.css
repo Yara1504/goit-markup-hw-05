@@ -588,21 +588,23 @@ footer {
     pointer-events: none;
 }
 .modal-title {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--dark);
-    margin-bottom: 33px;
+    margin-bottom: 16px;
 }
 .modal-input {
     width: 100%;
     height: 40px;
-    border: 1px solid var(--dark);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
     outline: transparent;
-    padding-left: 34px;
+    padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:hover,
 .modal-input:focus {
@@ -612,12 +614,13 @@ footer {
     fill: var(--primary-Brand);
 }
 .modal-line {
-    display: inline-block;
+    display: block;
     font-size: 12px;
     line-height: 1.17;
     text-align: left;
     letter-spacing: 0.04em;
     color: var(--subtle-Text);
+    margin-bottom: 4px;
 }
 .icon-input {
     fill: var(--dark);
@@ -625,7 +628,7 @@ footer {
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1).;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-wrap {
 position: relative;
@@ -633,20 +636,28 @@ position: relative;
 .modal-field {
     margin-bottom: 8px;
 }
+.modal-field-text {
+    margin-bottom: 16px;
+}
+.modal-field-checkbox {
+    margin-bottom: 24px;
+}
 .modal-textarea {
     width: 100%;
     height: 120px;
-    border: 1px solid var(--dark);
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
     outline: transparent;
-    padding: 8px 16px;
     font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
-    color: var(--hero-background);
-    outline: transparent;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    padding: 8px 16px;
     resize: none;
+}
+.modal-textarea:focus + .input-check {
+    border-color: #4D5AE5;
 }
 .modal-textarea::placeholder {
     font-size: 12px;
@@ -656,7 +667,7 @@ position: relative;
 }
 .check-text {
     font-size: 12px;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.04em; 
     color: var(--subtle-Text);
     display: flex;
@@ -667,11 +678,13 @@ position: relative;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    margin-right: 8px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+     border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-text a {
     color: var(--primary-Brand);
@@ -680,29 +693,38 @@ position: relative;
 .input-check:checked + .check-text span {
  background-color: var(--pressed-state);
  border: none;
- fill: white;
+ fill: var(--light);
 }
 .modal-btn {
  min-width: 169px;
  height: 56px;
  display: block;
+
  margin-left: auto;
  margin-right: auto;
+
+ font-family: "Roboto", sans-serif;
+ font-weight: 500;
  font-size: 16px;
  line-height: 1.5;
+ letter-spacing: 0.04em;
  color: white;
- padding: 16px 32px;
+ cursor: pointer;
  border-radius: 4px;
  background-color: var(--primary-Brand);
  border: none;
- cursor: pointer;
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.policy {
+    color: var(--primary-Brand);
 }
 .subscribe {
+ font-weight: 500;
  font-size: 16px;
  line-height: 1.5;
  letter-spacing: 0.02em;
  color: white;
- display: inline-block;
+ margin-bottom: 16px;
 }
 .footer-input {
     width: 264px;
@@ -711,23 +733,25 @@ position: relative;
     border-radius: 4px;
     background-color: transparent;
     outline: transparent;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
     color: var(--white-background);
     padding-left: 16px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     margin-right: 24px;
 }
 .footer-input::placeholder {
- font-size: 12px;
- line-height: 2;
- letter-spacing: 0.04em;
  color: var(--white-background);
 }
 .footer-button {
     min-width: 165px;
     height: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.04em;
     color: white;
     border-radius: 4px;
     background-color: var(--primary-Brand);
@@ -744,10 +768,6 @@ position: relative;
 }
 .subscribe-btn {
     fill: var(--white-background);
-}
-.footer-sub {
-  display: flex;
-  align-items: center;
 }
 .footer-form {
     display: flex;
