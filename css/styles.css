@@ -687,6 +687,9 @@ position: relative;
      border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
      fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.icon-span {
+    display: inline-flex;
+}
 .check-text a {
     color: var(--primary-Brand);
     text-decoration: underline;
@@ -759,7 +762,6 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
 }
 .footer-button:hover,
 .footer-button:focus {
@@ -767,6 +769,7 @@ position: relative;
 }
 .subscribe-btn {
     fill: var(--white-background);
+    margin-left: 16px;
 }
 .footer-form {
     display: flex;
