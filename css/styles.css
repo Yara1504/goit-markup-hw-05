@@ -671,7 +671,6 @@ position: relative;
     line-height: 1.17;
     letter-spacing: 0.04em; 
     color: var(--subtle-Text);
-    display: flex;
     align-items: center;
 }
 .check-text span {
